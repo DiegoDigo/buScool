@@ -1,4 +1,5 @@
 *.pyc
 .idea/
-components/
-db.sqlite3
+jquery
+materialize/
+db.sqlite3/
