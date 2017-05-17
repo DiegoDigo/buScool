@@ -1,3 +1,19 @@
-h1{
-    font-size: 200px;
+@import url('https://fonts.googleapis.com/css?family=Baloo+Da');
+
+nav {
+    background-color: #FFA726;
+    height: 75px;
+}
+
+nav a {
+    margin-top: 6px;
+}
+
+nav li a {
+    margin-top: 6px;
+}
+
+.brand-logo {
+    font-family: 'Baloo Da', cursive !important;
+    font-size: 45px !important;
 }
