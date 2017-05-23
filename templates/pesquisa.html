@@ -1,39 +1,113 @@
 {% extends "base.html" %}
 {% block title %}Pesquisa{% endblock %}
 {% block content %}
-    <div class="center homeCenter">
-    <div class="row">
-        <h3>Resultado para {{ pesquisado }}</h3>
-        <div class="col s12 m6">
-            <div class="card medium">
-            <div class="card-image">
-              <img src="http://lorempixel.com/100/190/nature/6">
-              <span class="card-title">Card Title</span>
-            </div>
-            <div class="card-content">
-              <p>I am a very simple card. I am good at containing small bits of information.
-              I am convenient because I require little markup to use effectively.</p>
-            </div>
-            <div class="card-action">
-              <a href="#">This is a link</a>
-            </div>
-          </div>
+
+        <div class="row">
+           <p class="resultPesquisa">Resultado para : <span class="subTitle">{{ pesquisa }}</span></p>
         </div>
-         <div class="col s12 m6">
-            <div class="card medium">
-            <div class="card-image">
-              <img src="http://lorempixel.com/100/190/nature/6">
-              <span class="card-title">Card Title</span>
+        <div class="row center">
+            <div class="col s12 m4">
+                <div class="card z-depth-3">
+                    <div class="card-image">
+                        <img src="http://lorempixel.com/200/100/nature/6">
+                    </div>
+                    <div class="card-content">
+                        <div class="row">
+                            <a class="right"><i class="material-icons">star_border</i></a>
+                            <a class="right"><i class="material-icons">star</i></a>
+                            <a class="right"><i class="material-icons">star</i></a>
+                            <a class="right"><i class="material-icons">star</i></a>
+                            <a class="right"><i class="material-icons">star</i></a>
+                        </div>
+                        <div class="row">
+                            <span class="card-title">Nome Motorista</span>
+                            <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+                        </div>
+                        <div class="row">
+                            <div class="col s12">
+                                <a class="right"><i class="material-icons">accessibility</i>{{ vagas }}</a>
+                                <a class="left"><i class="material-icons">accessible</i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="card-content">
-              <p>I am a very simple card. I am good at containing small bits of information.
-              I am convenient because I require little markup to use effectively.</p>
+        <div class="col s12 m4">
+                <div class="card z-depth-3">
+                    <div class="card-image">
+                        <img src="http://lorempixel.com/200/100/nature/6">
+                    </div>
+                    <div class="card-content">
+                        <div class="row">
+                            <a class="right"><i class="material-icons">star_border</i></a>
+                            <a class="right"><i class="material-icons">star_border</i></a>
+                            <a class="right"><i class="material-icons">star</i></a>
+                            <a class="right"><i class="material-icons">star</i></a>
+                            <a class="right"><i class="material-icons">star</i></a>
+                        </div>
+                        <div class="row">
+                            <span class="card-title">Nome Motorista</span>
+                            <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+                        </div>
+                        <div class="row">
+                            <div class="col s12">
+                                <a class="right"><i class="material-icons">accessibility</i>{{ vagas }}</a>
+                                <a class="left"><i class="material-icons">accessible</i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="card-action">
-              <a href="#">This is a link</a>
+
+        <div class="col s12 m4">
+                <div class="card z-depth-3">
+                    <div class="card-image">
+                        <img src="http://lorempixel.com/200/100/nature/6">
+                    </div>
+                    <div class="card-content">
+                        <div class="row">
+                            <a class="right"><i class="material-icons">star_border</i></a>
+                            <a class="right"><i class="material-icons">star_border</i></a>
+                            <a class="right"><i class="material-icons">star_border</i></a>
+                            <a class="right"><i class="material-icons">star</i></a>
+                            <a class="right"><i class="material-icons">star</i></a>
+                        </div>
+                        <div class="row">
+                            <span class="card-title">Nome Motorista</span>
+                            <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+                        </div>
+                        <div class="row">
+                            <div class="col s12">
+                                <a class="right"><i class="material-icons">accessibility</i>{{ vagas }}</a>
+                                <a class="left"><i class="material-icons">accessible</i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-    </div>
-    </div>
+
+        <div class="col s12 m4">
+                <div class="card z-depth-3">
+                    <div class="card-image">
+                        <img src="http://lorempixel.com/200/100/nature/6">
+                    </div>
+                    <div class="card-content">
+                        <div class="row">
+                            <span class="card-title">Nome Motorista</span>
+                            <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+                        </div>
+                        <div class="row">
+                            <div class="col s12">
+                                <a class="right"><i class="material-icons">accessibility</i>{{ vagas }}</a>
+                                <a class="left"><i class="material-icons">accessible</i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+         </div>
+
+
+    {%  include "footer.html" %}
 {% endblock %}

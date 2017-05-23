@@ -5,8 +5,11 @@
     <div class="row">
         <div class="col s12">
             <h2>Procure o melhor motorista </br>para seu Filho </h2>
+            <form method="GET" action="pesquisa">
             <input type="text" placeholder="Pesquisa Escola">
-            <a class="btn" href={% url 'pesquisa' %}>Pesquisar  <i class="large material-icons right">search</i></a>
+{#              <button class="btn"  type="submit" href={% url 'pesquisa' %}>Pesquisar  <i class="large material-icons right">search</i></button>#}
+                <button class="btn"  type="submit" href={% url 'pesquisa' %}>Pesquisar  <i class="large material-icons right">search</i></button>
+            </form>
         </div>
     </div>
     </div>
