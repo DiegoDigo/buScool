@@ -9,5 +9,4 @@ class EscolaQuerySet(models.query.QuerySet):
         return self.get(nomeEscola=nome)
 
     def escolasCidade(self, cidade):
-        idCidade = Logradouro.objects.get(cidade=cidade)
-        return self.filter(endereco=idCidade)
+        return self.filter(endereco__cidade=cidade)
