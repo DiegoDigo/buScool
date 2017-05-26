@@ -31,8 +31,8 @@ class Responsavel(models.Model):
 
     class Meta:
         ordering = ['nome']
-        verbose_name = 'Parents'
-        verbose_name_plural = 'Parents'
+        verbose_name = 'Responsavel'
+        verbose_name_plural = 'Responsaveis'
 
     def __str__(self):
         return self.nome

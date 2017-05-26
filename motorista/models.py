@@ -7,6 +7,7 @@ from endereco.models import Logradouro
 class Veiculo(models.Model):
     tipoVeiculo = models.CharField(verbose_name="Tipo Veiculo", max_length=100)
     capacidade = models.PositiveIntegerField(default=50)
+    capacidadeDeficiente = models.PositiveIntegerField(default=1, null=True, blank=True)
     responsavel = models.ManyToManyField(Responsavel, related_name="responsavel", verbose_name=u'Pais', blank=True)
 
     class Meta:
@@ -28,7 +29,10 @@ class Motorista(models.Model):
     categoria = models.CharField(verbose_name=u'Categoria Habilitação', max_length=2)
     endereco = models.ForeignKey(Logradouro, verbose_name=u'endereco', related_name="endereco")
     criadoEm = models.DateField(auto_now=True, auto_now_add=False)
+    descricao = models.TextField(verbose_name=u"Descrição", null=True, blank=True, default="Venha conecer nossos serviços")
     veiculo = models.ForeignKey(Veiculo, related_name="Veiculos", verbose_name=u'Veiculos')
+    deficiente = models.BooleanField(verbose_name="Aceita Deficiência", default=False)
+
 
     class Meta:
         ordering = ['nome']

@@ -13,21 +13,21 @@
   <nav>
     <div class="nav-wrapper">
       <div class="container">
-          <a href={% url 'home' %} class="brand-logo">BuScool</a>
+          <a href={% url 'site:home' %} class="brand-logo">BuScool</a>
           <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
           {% if user.is_authenticated%}
           <ul class="right hide-on-med-and-down">
-               <li><a href={% url 'home' %}>{% if  user.get_full_name == None  %}{{ user.get_username }}{% else %}{{ user.get_full_name }}{% endif %}<i class="material-icons right">account_box</i></a></li>
+               <li><a href={% url 'site:home' %}>{% if  user.get_full_name == None  %}{{ user.get_username }}{% else %}{{ user.get_full_name }}{% endif %}<i class="material-icons right">account_box</i></a></li>
           </ul>
           <ul class="side-nav" id="mobile-demo">
-              <li><a href={% url 'home' %}>{% if  user.get_full_name == None  %}{{ user.get_username }}{% else %}{{ user.get_full_name }}{% endif %}<i class="material-icons left">account_box</i></a></li>
+              <li><a href={% url 'site:home' %}>{% if  user.get_full_name == None  %}{{ user.get_username }}{% else %}{{ user.get_full_name }}{% endif %}<i class="material-icons left">account_box</i></a></li>
          </ul>
           {% else %}
            <ul class="right hide-on-med-and-down">
-               <li><a href={% url 'login' %}>Acessar</a></li>
+               <li><a href={% url 'site:login' %}>Acessar</a></li>
           </ul>
           <ul class="side-nav" id="mobile-demo">
-              <li><a href={% url 'login' %}>Acessar</a></li>
+              <li><a href={% url 'site:login' %}>Acessar</a></li>
          </ul>
           {% endif %}
        </div>

@@ -6,7 +6,7 @@ from .managers import EscolaQuerySet
 
 class Escola(models.Model):
     nomeEscola = models.CharField(verbose_name=u'Nome Escola', max_length=100, unique=True)
-    endereco = models.ForeignKey(Logradouro, verbose_name=u"Escola")
+    endereco = models.ForeignKey(Logradouro, verbose_name=u"Endereço")
     objects = EscolaQuerySet.as_manager()
 
     class Meta:

@@ -6,6 +6,7 @@
            <p class="resultPesquisa">Resultado para : <span class="subTitle">{{ pesquisa }}</span></p>
         </div>
         <div class="row center">
+        {% for motorista in motoristas %}
             <div class="col s12 m4">
                 <div class="card z-depth-3">
                     <div class="card-image">
@@ -13,8 +14,10 @@
                     </div>
                     <div class="card-content">
                         <div class="row">
-                            <a class="left"><i class="material-icons">accessible</i></a>
-                            <a class="left"><i class="material-icons">accessibility</i>{{ vagas }}</a>
+                            {% if motorista.deficiente %}
+                            <a class="left"><i class="material-icons">accessible</i>{{ motorista.veiculo.capacidadeDeficiente }}</a>
+                            {% endif %}
+                            <a class="left"><i class="material-icons">accessibility</i>{{ motorista.veiculo.capacidade }}</a>
                             <a class="right"><i class="material-icons">star_border</i></a>
                             <a class="right"><i class="material-icons">star</i></a>
                             <a class="right"><i class="material-icons">star</i></a>
@@ -22,15 +25,16 @@
                             <a class="right"><i class="material-icons">star</i></a>
                         </div>
                         <div class="row">
-                            <h1 class="card-title">Nome Motorista</h1>
-                            <p class="descricao">I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+                            <h1 class="card-title">{{ motorista.nome }}<br/> <small>{{ motorista.apelido }}</small></h1>
+                            <p class="descricao">{{ motorista.descricao }}</p>
                         </div>
                     </div>
                     <div class="card-action">
-                       <a href="#"><i class="material-icons right">add</i>Conheça-o</a>
+                       <a href="{% url "site:detalhe" pk=motorista.pk %}"><i class="material-icons right">add</i>Conheça-o</a>
                     </div>
                 </div>
             </div>
+        {% endfor %}
          </div>
     {%  include "footer.html" %}
 {% endblock %}
